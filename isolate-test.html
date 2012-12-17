@@ -1,0 +1,29 @@
+<head>
+  <title>isolate-test</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <h1>Hello World!</h1>
+  {{> template1 }}
+</template>
+
+<template name="template1">
+  <p>Template 1 has been rendered {{count}} times.
+     Its reactive variable is {{var}}.</p>
+  {{> template2 }}
+</template>
+
+<template name="template2">
+  <p>Template 2 has been rendered {{count}} times.
+     Its reactive variable is {{var}}.</p>
+  {{> template3 }}
+</template>
+
+<template name="template3">
+  <p>Template 3 has been rendered {{count}} times.
+     Its reactive variable is {{var}}.</p>
+</template>
