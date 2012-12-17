@@ -4,6 +4,8 @@ if (Meteor.isClient) {
   };
   var rendered = function() {
       this.count++;
+      // move count data inside the 'data context' for the template
+      this.data.count = this.count;
   };
 
   _.each(['template1','template2','template3','template4'], function(t) {
