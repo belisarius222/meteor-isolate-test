@@ -6,7 +6,7 @@ if (Meteor.isClient) {
       this.count++;
   };
 
-  _.each(['template1','template2','template3'], function(t) {
+  _.each(['template1','template2','template3','template4'], function(t) {
       Template[t].created = created;
       Template[t].rendered = function() {
           this.count++;

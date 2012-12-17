@@ -9,6 +9,7 @@
 <template name="hello">
   <h1>Hello World!</h1>
   {{> template1 }}
+  {{> template4 }}
 </template>
 
 <template name="template1">
@@ -25,5 +26,10 @@
 
 <template name="template3">
   <p>Template 3 has been rendered {{count}} times.
+     Its reactive variable is {{var}}.</p>
+</template>
+
+<template name="template4">
+  <p>Template 4 has been rendered {{count}} times.
      Its reactive variable is {{var}}.</p>
 </template>
