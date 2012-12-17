@@ -8,28 +8,23 @@
 
 <template name="hello">
   <h1>Hello World!</h1>
-  {{> template1 }}
-  {{> template4 }}
+  {{>a}}
+  {{>b}}
+  {{#each counts}}
+    {{> countDisplay}}
+  {{/each}}
 </template>
 
-<template name="template1">
-  <p>Template 1 has been rendered {{count}} times.
-     Its reactive variable is {{var}}.</p>
-  {{> template2 }}
+<template name="countDisplay">
+  <p>Template {{templateName}} has been rendered {{count}} times.
 </template>
 
-<template name="template2">
-  <p>Template 2 has been rendered {{count}} times.
-     Its reactive variable is {{var}}.</p>
-  {{> template3 }}
+<template name="a">
+  <p>{{getA}}</p>
+  <button>Click me!</button>
 </template>
 
-<template name="template3">
-  <p>Template 3 has been rendered {{count}} times.
-     Its reactive variable is {{var}}.</p>
-</template>
-
-<template name="template4">
-  <p>Template 4 has been rendered {{count}} times.
-     Its reactive variable is {{var}}.</p>
+<template name="b">
+  <p>{{getB}}</p>
+  <button>Click me instead!</button>
 </template>
